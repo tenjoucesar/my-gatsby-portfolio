@@ -6,8 +6,8 @@ const Home = () => (
 	<Layout>
 		<Seo />
 		<Intro />
-		<Projects />
 		<Skills />
+		<Projects />
 		<Contact />
 	</Layout>
 );

@@ -29,7 +29,7 @@ export const Details = styled.div`
   }
 
   h1 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-size: 36pt;
     color: ${({ theme }) => (theme === 'light' ? '#212121' : '#fff')};
 
@@ -44,7 +44,7 @@ export const Details = styled.div`
 
   h4 {
     margin-bottom: 2.5rem;
-    font-size: 32pt;
+    font-size: 28pt;
     font-weight: normal;
     color: ${({ theme }) => (theme === 'light' ? '#707070' : '#e6e6e6')};
 
@@ -53,8 +53,12 @@ export const Details = styled.div`
     }
 
     @media (max-width: 680px) {
-      font-size: 26pt;
+      font-size: 22pt;
     }
+  }
+
+  p {
+    margin-bottom: 3rem;
   }
 `;
 

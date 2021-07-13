@@ -1,28 +1,48 @@
 import React, { useContext } from 'react';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { ThemeContext } from 'providers/ThemeProvider';
-import { Container, Button } from 'components/common';
+import { Container } from 'components/common';
 import dev from 'assets/illustrations/skills.svg';
 import { Wrapper, SkillsWrapper, Details, Thumbnail } from './styles';
+
+import {
+  feSkills,
+  beSkills,
+  mobileSkills,
+  otherSkills
+} from './Skills';
+import SkillsContainer from './SkillsContainer';
 
 export const Skills = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <Wrapper id="about">
+    <Wrapper id="skills">
       <SkillsWrapper as={Container}>
         <Thumbnail>
-          <img src={dev} alt="I’m John and I’m a Backend & Devops engineer!" />
+          <img src={dev} alt="I’m Cesar and I’m a oftware engineer!" />
         </Thumbnail>
         <Details theme={theme}>
-          <h1>More about me</h1>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry’s standard dummy.
-          </p>
-          <Button as={AnchorLink} href="#contact">
-            Hire me
-          </Button>
+          <h1>Skills</h1>
+          <SkillsContainer
+            title='FE'
+            skills={feSkills}
+            theme={theme}
+          />
+          <SkillsContainer
+            title='BE'
+            skills={beSkills}
+            theme={theme}
+          />
+          <SkillsContainer
+            title='Mobile'
+            skills={mobileSkills}
+            theme={theme}
+          />
+          <SkillsContainer
+            title='Others'
+            skills={otherSkills}
+            theme={theme}
+          />
         </Details>
       </SkillsWrapper>
     </Wrapper>
